@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
   'opticspeech-totemsignal-8000.codio.io',
+  'barcodeisabel-doubleflood-8000.codio.io',
 ]
 
 
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'blango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                  BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
