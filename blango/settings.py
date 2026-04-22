@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
   'opticspeech-totemsignal-8000.codio.io',
   'barcodeisabel-doubleflood-8000.codio.io',
+  'caviarcopper-logocrater-8000.codio.io',
 ]
 
 

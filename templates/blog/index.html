@@ -1,7 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
+{% load blog_extras %}
 
-<h2>Index Template</h2>
+<h2>Blog Posts All</h2>
+
+{% for posti in posts %}
+    <div class="row">
+        <div class="col">
+          <h3>  {{posti.title}}  </h3>
+          <small> By  {{ posti.author|author_details:request.user  }} on {{posti.published_at |date:"D d M Y" }} </small>
+         
+          <p> {{posti.summary}}  </p>
+          <p>
+            ({{posti.content |wordcount }} words)
+            <a href="#"> Read More...</a>
+          </p>
+        </div>
+      </div>
+
+{% endfor %}
+
 
 <!-- <div class="row">
     <div class="col-6 bg-primary">Column 1</div>
@@ -15,11 +33,12 @@
     <div class="col-md bg-success">Column 3</div>
 </div> -->
 
+<!-- 
 <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-6 bg-primary">Column 1</div>
     <div class="col-xs-12 col-sm-2 col-md-2 bg-danger">Column 2</div>
     <div class="col bg-success">Column 3</div>
-</div>
+</div> -->
 
 
 <!-- <div class="dropdown">
