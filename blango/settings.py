@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
   'opticspeech-totemsignal-8000.codio.io',
   'barcodeisabel-doubleflood-8000.codio.io',
   'caviarcopper-logocrater-8000.codio.io',
+  'volumemeaning-othelloradius-8000.codio.io',
 ]
 
 
