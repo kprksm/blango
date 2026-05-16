@@ -23,3 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("blog/", include("blog.urls")),
 ]
+
+# print(f"Time zone: {settings.TIME_ZONE}")
