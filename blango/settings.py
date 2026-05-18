@@ -37,6 +37,7 @@ class Dev(Configuration):
     'discostone-citrushoney-8000.codio.io',
     'clientproton-archermarion-8000.codio.io',
     'carmenadmiral-alpinesailor-8000.codio.io',
+    'forestgravity-pandorapassage-8000.codio.io',
   ])
 
 
@@ -193,6 +194,13 @@ class Dev(Configuration):
         "level": "DEBUG",
     },
   }
+  PASSWORD_HASHERS = [
+      'django.contrib.auth.hashers.Argon2PasswordHasher',
+      'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+      'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+      'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+  ]
+
 
 
 
