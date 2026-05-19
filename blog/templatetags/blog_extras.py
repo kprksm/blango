@@ -1,14 +1,16 @@
 from django.contrib.auth import get_user_model
-user_model = get_user_model()
 from django.utils.html import escape,conditional_escape,format_html
 from django.utils.safestring import mark_safe
 from blog.models import Post,Comment,Tag
-
-
 from django import template
 
 register = template.Library()
 
+user_model = get_user_model()
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 # @register.inclusion_tag("templates/blog/index.html")
 # @register.filter
@@ -91,9 +93,8 @@ def endcol():
 
 @register.inclusion_tag('blog/post-list.html')
 def recent_posts(post):
-
   posts = Post.objects.exclude(pk = post.pk )[:5]
-
+  logger.debug("Loaded %d recent posts for post %d", len(posts), post.pk)
   context = { "posts" :posts, "title" : "Recent Posts" }
   return(context)
 

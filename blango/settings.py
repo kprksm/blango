@@ -38,6 +38,7 @@ class Dev(Configuration):
     'clientproton-archermarion-8000.codio.io',
     'carmenadmiral-alpinesailor-8000.codio.io',
     'forestgravity-pandorapassage-8000.codio.io',
+    'kitchenreflex-delivermetro-8000.codio.io',
   ])
 
 

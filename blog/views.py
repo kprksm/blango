@@ -4,10 +4,19 @@ from blog.models import Post,Comment,Tag
 from django.utils import timezone
 from blog.forms import CommentForm
 import logging
-
+# from django.views.decorators.cache import cache_page
+# from django.views.decorators.vary import vary_on_cookie
 # Create your views here.
 
 logger = logging.getLogger(__name__)
+
+# @cache_page(300)
+# @vary_on_cookie
+# def index(request):
+#     from django.http import HttpResponse
+#     logger.debug("Index Got called")
+#     return HttpResponse(str(request.user).encode("ascii"))
+
 
 class indexView(View):
   def get(self,request):
