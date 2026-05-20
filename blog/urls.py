@@ -5,6 +5,7 @@ from blog import views
 
 urlpatterns = [
     # other patterns
+    # path("ip/",views.get_ip),
     path("", views.indexView.as_view()),
     # path("", views.index),
     path("post/<slug>/", views.post_detail, name = "blog-post-detail")
